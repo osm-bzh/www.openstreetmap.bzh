@@ -1317,7 +1317,9 @@ function initLayerTypes() {
     new LayerType('osmfr-openriverboatmap', 'OSM FR openriverboatmap', function () {
         return new OpenLayers.Layer.OSM('OSM FR hot', switch_url('http://{switch:a,b,c}.tile.openstreetmap.fr/openriverboatmap/${z}/${x}/${y}.png'), layer_options);
     }),
-
+    new LayerType('osmbr', 'OSM BR', function () {
+        return new OpenLayers.Layer.OSM('OSM BR', switch_url('http://tile.openstreetmap.bzh/org/${z}/${x}/${y}.png'), layer_options);
+    }),
     // wikimedia.org
 /* XXX: protected by referer
     new LayerType('wikimedia-osm-intl', 'Wikimedia OSM', function () {
