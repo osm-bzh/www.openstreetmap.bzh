@@ -1318,7 +1318,10 @@ function initLayerTypes() {
         return new OpenLayers.Layer.OSM('OSM FR hot', switch_url('http://{switch:a,b,c}.tile.openstreetmap.fr/openriverboatmap/${z}/${x}/${y}.png'), layer_options);
     }),
     new LayerType('osmbr', 'OSM BR', function () {
-        return new OpenLayers.Layer.OSM('OSM BR', switch_url('http://tile.openstreetmap.bzh/org/${z}/${x}/${y}.png'), layer_options);
+        return new OpenLayers.Layer.OSM('OSM BR', switch_url('http://tile.openstreetmap.bzh/br/${z}/${x}/${y}.png'), layer_options);
+    }),
+    new LayerType('osmbrlocal', 'OSM BR local', function () {
+        return new OpenLayers.Layer.OSM('OSM BR', switch_url('http://tile.openstreetmap.local/br/${z}/${x}/${y}.png'), layer_options);
     }),
     // wikimedia.org
 /* XXX: protected by referer
